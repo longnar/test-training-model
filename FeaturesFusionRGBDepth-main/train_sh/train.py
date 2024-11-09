@@ -225,7 +225,7 @@ def run(
                     # update each num_steps_per_update batch
                     if num_iter == num_gradient_per_update :
                         
-                        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5.0)
+                        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1)
                         #update weight
                         optimizer.step()
                         optimizer.zero_grad()
